@@ -9,6 +9,9 @@ html {
 }
 
 .page {
+  display: flex;
+  justify-content: center;  
+  align-items: center; 
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -39,10 +42,9 @@ ol {
 
 .content {
   display: flex;
-  justify-content: center;  /* Выравнивание по горизонтали */
+  justify-content: center;  
   align-items: center; 
   gap: 30px;
-  margin: 133px 30px;
 }
 
 .result__video-container {
