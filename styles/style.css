@@ -9,8 +9,6 @@ html {
 }
 
 .page {
-  max-height: 800px;
-  overflow: hidden;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -41,14 +39,14 @@ ol {
 
 .content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;  /* Выравнивание по горизонтали */
+  align-items: center; 
   gap: 30px;
-  align-items: end;
-  max-height: 534px;
   margin: 133px 30px;
 }
 
 .result__video-container {
+  margin-top: 78px;
   margin-bottom: 16px;
   width: 711px;
   height: 386px;
@@ -88,11 +86,11 @@ fieldset {
 
 .search-form__label {
   display: flex;
+  align-items: center; 
   width: fit-content;
   height: fit-content;
   cursor: pointer;
 }
-
 
 .search-form__label:focus {
   outline: none;
@@ -194,14 +192,18 @@ fieldset {
   outline: 1px solid #fff;
 }
 
+.search-form__label:hover > * {
+  text-decoration: underline; 
+}
+
+.search-form__label:hover > *:not(.search-form__label-text) {
+  text-decoration: none; 
+}
+
 .search-form__label-text {
   width: auto;
   appearance: none;
   margin-left: 5px;
-}
-
-.search-form__label-text:hover {
-  text-decoration: underline;
 }
 
 .button {
@@ -230,10 +232,6 @@ fieldset {
 }
 
 .button:focus {
-  outline: none;
-}
-
-.button:focus {
   outline: 1px solid white;
   outline-offset: 1px;
   text-decoration: none;
@@ -251,7 +249,7 @@ fieldset {
 }
 
 .title {
-  font-family: 'Oswald';
+  font-family: 'Oswald', sans-serif;
   font-size: 75px;
   font-weight: 700;
   line-height: 70.5px;
@@ -297,7 +295,6 @@ fieldset {
 
 .content__card-link:focus-visible {
   outline: 1px solid white;
-  background-color: #545050;
 }
 
 .content__card-link_current:first-child {
@@ -320,7 +317,8 @@ fieldset {
 
 .content__video-card-title {
   margin-top: 6px;
-  font-family: 'Oswald';
+  margin-left: 2px;
+  font-family: 'Oswald', sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 30px;
@@ -328,13 +326,15 @@ fieldset {
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   text-transform: uppercase;
-  margin-left: 2px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 192px; 
 }
 
 .content__video-card-description {
   margin-top: 6px;
-  width: 200px;
-  height: 65px;
+  margin-left: 2px;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -342,7 +342,6 @@ fieldset {
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  margin-left: 2px;
 }
 
 .content__video-card-thumbnail {
