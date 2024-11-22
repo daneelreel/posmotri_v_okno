@@ -267,6 +267,7 @@ fieldset {
 }
 
 .content__list {
+  width: 409px;
   height: 298px;
   position: relative;
   overflow: auto;
@@ -281,6 +282,10 @@ fieldset {
   text-decoration: none;
   color: #fff;
   margin: 2px;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
 }
 
 .content__card-link:active {
@@ -313,10 +318,6 @@ fieldset {
   height: 107px;
 }
 
-.content__video-card-description-container:hover {
-  text-decoration: underline;
-}
-
 .content__video-card-title {
   margin-top: 6px;
   margin-left: 2px;
@@ -325,8 +326,6 @@ fieldset {
   font-weight: 700;
   line-height: 30px;
   text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
   text-transform: uppercase;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -342,8 +341,6 @@ fieldset {
   font-weight: 400;
   line-height: 16.2px;
   text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
 }
 
 .content__video-card-thumbnail {
